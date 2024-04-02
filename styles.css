@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* colors */
+    --color-primary-yellow: hsl(47, 88%, 63%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --color-neutral-grey: hsl(0, 0%, 50%);
+    --color-neutral-black:  hsl(0, 0%, 7%);
+    /* fonts */
+    --font-size: 16px;
+    --font-family-figtree: "Figtree", sans-serif;
+    --font-weight-semibold: 500;
+    --font-weight-bold: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family-figtree);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-black);
+    background-color: var(--color-primary-yellow);
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+}
+
+p {
+    color: var(--color-neutral-grey);
+    line-height: 1.5;
+}
+
+#blogCard {
+    width: 400px;
+    height: fit-content;
+    background-color: var(--color-neutral-white);
+    padding: 20px;
+    border: 1px solid var(--color-neutral-black);
+    border-radius: 20px;
+    box-shadow: 5px 5px var(--color-neutral-black);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#blogCard .blogCard__illustration {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.blogCard__tag {
+    font-weight: var(--font-weight-bold);
+    background-color: var(--color-primary-yellow);
+    padding: 5px 8px;
+    width:fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#blogCard h1 {
+    font-size: 22px;
+    font-weight: var(--font-weight-bold);
+}
+
+.blogCard__writer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blogCard__writer img {
+    width: 30px;
+}
+
+.blogCard__writer__name{
+    font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 400px) {
+    #blogCard {
+        width: 80%;
+    }
+    #blogCard h1 {
+        font-size: 20px;
+    }
+    .blogCard__tag {
+        width:fit-content;
+    }
+}
